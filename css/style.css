@@ -1,0 +1,192 @@
+*{/*resetar todos los estilos que pone html por dfault*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h2{/*estios al tirulo inicar sesion*/
+    color: #1b1b1b;
+    font-family:'arial' ;
+    font-size: 17pt;/*17 puntos*/
+    margin-bottom: 20px;
+}
+p{
+    color: #1b1b1b;
+    font-family:'arial' ;
+    font-size: 10pt;
+}
+input[type="email"],input[type="password"],input[type="text"]{
+    display:block;
+    width: 100%;
+    padding: 5px 0 5px 0;/*5px ariiba 0 derecha 5px abajo 0 izquierda*/
+    border: 0;
+    border-bottom:1px solid rgba(0,0,0,.6) ;
+    background-color: rgb(236, 230, 230);
+    outline: none;
+    font-size: 11pt;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+a{
+    font-family: 'Arial';
+    font-size: 10pt;
+    color: #0067b8;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+label{
+    color: #1b1b1b;
+    font-size: 10pt;
+    font-family: 'Arial';
+    display: block;
+    margin-bottom: 20px;
+}
+
+#containerLogin{/*estilos a section con id containerLogin*/
+    width: 100%;
+    height: 100vh;/*ocupa el 100% del alto del dsipositovo*/
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/green-1072828_1920.jpg);/*para regresar un nivel en la jerarquia de carpetas y tomar la imagen que requerimos es con ..*/
+    background-repeat: no-repeat;
+    background-size:cover ;
+}
+#containerLogin:before{/*darle una funcionalidad */
+    content: '';
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, .60);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#bodyLogin{/*div bodyLogin*/
+    width: 440px;
+    height: 360px;
+    background-color:rgb(236, 230, 230);
+    padding: 44px 0;
+    overflow: hidden;/**/ 
+    overflow-y: auto;
+    z-index: 1;
+    
+}
+
+
+.divLogo{/*divLogo es una clase*/
+    padding: 0 44px;/*0 de arriba hacia  abajo y 44px de izquierda y derecha */
+    text-align: center;
+}
+.logoLogin{/*estilo a logo tomandolo de su clase logoLogin*/
+    width: 200px;
+    margin-bottom:20px ;
+}
+#containerLayout{
+    position: relative;
+}
+
+#containerLayout > div{/*con la flecha se indica que solo se quiere afectar a los elentos div del primer nivel*/
+    position: absolute;
+    top: 0;
+    left: 100%;
+    padding: 0 44px;
+    width: 100%;
+    transition: .4s all;
+}
+.divButton{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: flex-end;
+}
+.divBtnLogin{
+    margin-top: 60px;
+}
+.btnFormLogin{
+    color: #FFF;
+    cursor: pointer;
+    border: 0;
+    background-color: #0067b8;
+    padding: 8px 20px;
+    font-size: 11pt;
+    letter-spacing: 1px;
+
+
+}
+
+.divEmailUser{
+    display: block;
+    margin-bottom: 10px;
+}
+#btnPrev{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+    margin-right: 5px;
+    
+}
+#btnPrev i{
+    color: gray;
+}
+#btnPrev:hover{
+    background-color: rgb(201, 182, 182);
+}
+#spanEmail{
+     font-size: 10pt;
+}
+.divBtnAction{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.divBtnAction > button{
+    width: 49%;
+}
+#btnNextEmail{
+    background-color: green;
+}
+#btnCancelar{
+    background-color: grey;
+}
+.opacity0{
+    opacity:0;
+}
+.opacity1{
+    opacity: 1;
+    transition: opacity .6s;
+}
+.layoutActive{
+    left: 0 !important;
+}
+
+.layoutLeft{
+    left: -100% !important;
+}
+.layoutRight{
+    left: 100% !important;
+}
+
+@media (max-width: 600px){
+    #bodyLogin{
+        width: 100%;
+        height: 100%;
+        min-width: 350px;
+    }
+}
